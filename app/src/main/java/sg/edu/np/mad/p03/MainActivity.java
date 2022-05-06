@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
@@ -49,9 +51,11 @@ public class MainActivity extends AppCompatActivity {
         followed = !followed;  //Switches between bool values when pressed
         if (followed){
             text.setText("Unfollow");
+            Toast.makeText(getBaseContext(),"Followed",Toast.LENGTH_SHORT).show();
         }
         else {
             text.setText("Follow");
+            Toast.makeText(getBaseContext(),"Unfollowed",Toast.LENGTH_SHORT).show();
         }
     }
 }
